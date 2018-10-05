@@ -1,0 +1,10 @@
+.jumbotron.grey-jumbotron
+  %center
+    %h1
+      ToDo App
+    %p
+      Demo ToDo app using Ruby on Rails and Angular JS.
+    - if current_user.present?
+      = link_to 'My Tasks', tasks_path, class: 'btn btn-lg btn-success', role: 'button'
+    -else
+      = link_to 'Sign Up', new_user_registration_path, class: 'btn btn-lg btn-success', role: 'button'
